@@ -97,13 +97,12 @@ class COVID19Classifier(nn.Module):
         # Use ResNet18 as backbone (without pretrained weights due to SSL issue)
         self.resnet = models.resnet18(pretrained=False)
         
-        # Replace final layer with custom classifier
+        # Replace final layer with custom classifier (removed BatchNorm for single-sample compatibility)
         num_features = self.resnet.fc.in_features
         self.resnet.fc = nn.Sequential(
             nn.Dropout(0.5),
             nn.Linear(num_features, 256),
             nn.ReLU(),
-            nn.BatchNorm1d(256),
             nn.Dropout(0.3),
             nn.Linear(256, 128),
             nn.ReLU(),
