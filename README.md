@@ -1,6 +1,6 @@
 # 🔬 COVID-19 Chest X-Ray Classification Project
 
-**Author**: Jordan After Midnight  
+**Author**: Jordanaftermidnight  
 **Project**: Advanced Medical AI for COVID-19 Detection
 
 ## 🎯 Overview

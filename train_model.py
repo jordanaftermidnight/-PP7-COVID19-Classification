@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 COVID-19 Chest X-Ray Classification Training Script
-Author: Jordan After Midnight
+Author: Jordanaftermidnight
 """
 
 import os

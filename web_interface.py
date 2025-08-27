@@ -2,7 +2,7 @@
 """
 Streamlit Web Interface for COVID-19 Chest X-Ray Classification
 Simple drag-and-drop interface with Grad-CAM visualization
-Author: Jordan After Midnight
+Author: Jordanaftermidnight
 """
 
 import streamlit as st

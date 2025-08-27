@@ -2,7 +2,7 @@
 """
 Ensemble Model for COVID-19 Classification
 Combines multiple CNN architectures for improved performance
-Author: Jordan After Midnight
+Author: Jordanaftermidnight
 """
 
 import torch

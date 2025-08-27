@@ -2,7 +2,7 @@
 """
 Grad-CAM Visualization for COVID-19 Classification Model
 Shows which parts of chest X-rays the model focuses on for decision making
-Author: Jordan After Midnight
+Author: Jordanaftermidnight
 """
 
 import torch
