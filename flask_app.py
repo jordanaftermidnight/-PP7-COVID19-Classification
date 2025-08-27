@@ -2,6 +2,7 @@
 """
 Flask Web Interface for COVID-19 Chest X-Ray Classification
 Simple upload and predict interface
+Author: Jordan After Midnight
 """
 
 from flask import Flask, render_template, request, jsonify, send_file

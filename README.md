@@ -1,5 +1,8 @@
 # 🔬 COVID-19 Chest X-Ray Classification Project
 
+**Author**: Jordan After Midnight  
+**Project**: Advanced Medical AI for COVID-19 Detection
+
 ## 🎯 Overview
 Advanced AI system for detecting COVID-19 pneumonia patterns in chest X-ray images using deep learning. Features multiple CNN architectures, explainable AI visualization, and interactive web interfaces.
 

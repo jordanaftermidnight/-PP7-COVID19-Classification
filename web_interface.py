@@ -2,6 +2,7 @@
 """
 Streamlit Web Interface for COVID-19 Chest X-Ray Classification
 Simple drag-and-drop interface with Grad-CAM visualization
+Author: Jordan After Midnight
 """
 
 import streamlit as st
@@ -9,9 +10,15 @@ import torch
 import torch.nn as nn
 import torchvision.models as models
 import torchvision.transforms as transforms
-from pytorch_grad_cam import GradCAM
-from pytorch_grad_cam.utils.model_targets import ClassifierOutputTarget
-from pytorch_grad_cam.utils.image import show_cam_on_image
+
+try:
+    from pytorch_grad_cam import GradCAM
+    from pytorch_grad_cam.utils.model_targets import ClassifierOutputTarget
+    from pytorch_grad_cam.utils.image import show_cam_on_image
+    GRADCAM_AVAILABLE = True
+except ImportError:
+    st.warning("⚠️ Grad-CAM not available. Install with: pip install pytorch-grad-cam")
+    GRADCAM_AVAILABLE = False
 import numpy as np
 import cv2
 import matplotlib.pyplot as plt

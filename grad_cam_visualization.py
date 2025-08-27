@@ -2,15 +2,22 @@
 """
 Grad-CAM Visualization for COVID-19 Classification Model
 Shows which parts of chest X-rays the model focuses on for decision making
+Author: Jordan After Midnight
 """
 
 import torch
 import torch.nn as nn
 import torchvision.models as models
 import torchvision.transforms as transforms
-from pytorch_grad_cam import GradCAM
-from pytorch_grad_cam.utils.model_targets import ClassifierOutputTarget
-from pytorch_grad_cam.utils.image import show_cam_on_image
+try:
+    from pytorch_grad_cam import GradCAM
+    from pytorch_grad_cam.utils.model_targets import ClassifierOutputTarget
+    from pytorch_grad_cam.utils.image import show_cam_on_image
+    GRADCAM_AVAILABLE = True
+except ImportError:
+    print("Warning: pytorch-grad-cam not installed. Install with: pip install pytorch-grad-cam")
+    GradCAM = None
+    GRADCAM_AVAILABLE = False
 import numpy as np
 import cv2
 import matplotlib.pyplot as plt
